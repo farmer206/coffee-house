@@ -1,0 +1,99 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 40px;
+  &__container {
+    display: flex;
+    max-width: 1360px;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+    border-radius: 40px;
+    background-color: $background-container;
+  }
+  &__ofer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+  }
+  &__title {
+    color: $text-light;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    color: $background-body;
+    border: 1px solid $border-light;
+    box-sizing: border-box;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+    &:hover {
+      border-color: $background-body;
+      color: $text-dark;
+      background-color: $background-body;
+    }
+  }
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 0 0;
+  &__title {
+    color: $text-light;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 2px solid $border-dark;
+    border-bottom-width: medium;
+    transition: all 0.4s ease 0s;
+    &:hover:not(:last-child) {
+      border-bottom: 2px solid $border-light;
+      border-bottom-width: medium;
+    }
+  }
+  &__link-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  &__text {
+    color: $text-light;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+  }
+}

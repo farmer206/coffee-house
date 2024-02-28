@@ -1,0 +1,98 @@
+.mobile-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  align-self: stretch;
+  &__container {
+    display: flex;
+    max-width: 1360px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex: 1 0 0;
+    border-radius: 40px;
+    color:#665F55;
+  }
+  &__ofer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+  }
+  &__title {
+    width: 630px;
+  }
+  &__button {
+    display: flex;
+    width: 156px;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid $border-dark;
+  }
+  &__button img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.button {
+  display: flex;
+  width: 200px;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 8px;
+  color: $text-dark;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  background-color: $background-body;
+  transition: all 0.4s ease 0s;
+  box-sizing: border-box;
+  &:hover {
+    color: $background-body;
+    background-color: $background-container;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  &__cuption {
+    font-style: normal;
+    color: $text-dark;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+  }
+  &__link {
+    color: $text-dark;
+    font-style: normal; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+.button:hover .button__cuption, .button:hover .button__link {
+  color: $background-body;
+}
+
+.mobile-screens {
+  background: url('/src/img/mobile-screens.png'), #e1d4c9 50% / cover no-repeat;
+  width: 630px;
+  height: 630px;
+}
