@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 40px;
   gap: 40px;
   // align-self: stretch;
   &__container {
@@ -34,24 +35,23 @@
   border-radius: 20px;
   overflow: hidden;
   &__image {
-    width: 726px;
-    height: 726px;
-    margin: -68px -33px;
-    flex-shrink: 0;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.09);
     transition: transform 0.5s ease-in;
   }
 }
 
 .column-1 .box:first-child, .column-2 .box:last-child {
-  width: 660px;
-  height: 590px;
+  max-width: 660px;
+  max-height: 590px;
 }
 
 .column-1 .box:last-child, .column-2 .box:first-child {
-  width: 660px;
-  height: 430px;
+  max-width: 660px;
+  max-height: 430px;
 }
 
 .box:hover img {
-  transform: scale(0.91);
+  transform: scale(1);
 }

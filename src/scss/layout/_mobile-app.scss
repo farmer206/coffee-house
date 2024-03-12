@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 40px;
   gap: 100px;
   align-self: stretch;
   &__container {
@@ -9,6 +10,7 @@
     max-width: 1360px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 100px;
     flex: 1 0 0;
     border-radius: 40px;
@@ -49,6 +51,7 @@
 .button {
   display: flex;
   width: 200px;
+  height: 64px;
   padding: 12px 20px;
   align-items: center;
   gap: 8px;
@@ -92,7 +95,11 @@
 }
 
 .mobile-screens {
-  background: url('/src/img/mobile-screens.png'), #e1d4c9 50% / cover no-repeat;
-  width: 630px;
-  height: 630px;
+  max-width: 630px;
+  height: auto;
+}
+
+.mobile-screens img {
+  width: 100%;
+  object-fit: cover;
 }

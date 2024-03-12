@@ -5,30 +5,51 @@
   gap: 20px;
   align-self: stretch;
   &__container {
-    display: flex;
+    // max-width: 1360px;
     padding: 0px 40px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     align-self: stretch;
+    // align-items: center;
+  }
+  &__body {
+    position: relative;
+    max-width: 1360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // align-self: stretch;
+  }
+  &__logo {
+    flex: 0 0 100px;
+    position: relative;
+    z-index: 15;
   }
   &__menu {
     display: flex;
-    max-width: 1360px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    align-self: stretch;
-  }
-  &__logo {
-    width: 100px;
-    height: 60px;
+    flex: 1 0 0;
   }
 }
 
+.header__logo img {
+  max-width: 100%;
+  display: block
+}
+
+.header__body::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-body;
+  z-index: 10;
+}
+
 .menu {
-  &__burger {
-    display: none;
-  }
   &__nav {
     display: flex;
     justify-content: center;
@@ -36,12 +57,14 @@
     gap: 40px;
     flex: 1 0 0;
     align-self: stretch;
+    position: relative;
+    z-index: 10;
   }
   &__item {
     display: inline-flex;
     // flex-direction: column;
     // align-items: center;
-    border-bottom: 2px solid $background-body;
+    border-bottom: 2px solid transparent;
     border-bottom-width: medium;
     gap: 4px;
     transition: all 0.3s ease 0s;
@@ -82,6 +105,8 @@
   height: 28px;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 15;
 }
 
 .hero {
