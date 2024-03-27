@@ -1,3 +1,5 @@
+@import '../components/button-icon-dark';
+
 .favorite-coffee {
   display: flex;
   padding: 0px 40px;
@@ -23,6 +25,7 @@
   align-items: center;
   gap: 40px;
   align-self: stretch;
+  
   &__slide-1 {
     display: flex;
     width: 1152px;
@@ -64,28 +67,6 @@
       background: $border-dark;
     }
   }
-  // &__button-icon-dark {
-  //   display: flex;
-  //   width: 60px;
-  //   height: 60px;
-  //   justify-content: center;
-  //   align-items: center;
-  //   border-radius: 100px;
-  //   border: 1px solid $border-dark;
-  //   transition: all 0.4s ease 0s;
-  //   color: $text-dark;
-  //   box-sizing: border-box;
-  //   cursor: pointer;
-  //   &:hover {
-  //     color: $text-light;
-  //     background-color: $background-container;
-  //   }
-  // }
-  // &__button-icon-dark img {
-  //   width: 24px;
-  //   height: 24px;
-  //   flex-shrink: 0;
-  // }
 }
 
 .description {

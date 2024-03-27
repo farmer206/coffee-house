@@ -19,7 +19,7 @@
     max-width: 1360px;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     align-self: stretch;
   }
@@ -31,7 +31,7 @@
     align-self: stretch;
   }
   &__title {
-    width: 800px;
+    max-width: 800px;
     text-align: center;
   }
 }
@@ -51,9 +51,10 @@
   }
   &__item {
     display: flex;
-    padding: 8px 16px 8px 8px;
     justify-content: center;
     align-items: center;
+    padding: 8px 16px 8px 8px;
+    max-height: 46px;
     gap: 8px;
     background-color: transparent;
     border-radius: 100px;
@@ -68,17 +69,31 @@
   }
   &__icon {
     display: flex;
-    padding: 3px 7px;
     justify-content: center;
     align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 3px 7px;
     border-radius: 100px;
     background: $border-light;
     text-align: center;
-    font-size: 16px;
     font-style: normal;
+    font-size: 16px;
     font-weight: 600;
     line-height: 150%;
   }
+}
+
+.tab__item:nth-child(1) {
+  max-width: 115px;
+}
+
+.tab__item:nth-child(2) {
+  max-width: 90px;
+}
+
+.tab__item:nth-child(3) {
+  max-width: 124px;
 }
 
 .tab__item:hover {
@@ -89,13 +104,9 @@
 }
 
 .tab-pane {
-  display: flex;
+  display: grid;
+  grid-gap: 40px;
   max-width: 1360px;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
 }
 
 .tab-pane:not(.tab-pane-show) {
@@ -104,10 +115,11 @@
 
 .preview {
   display: flex;
-  height: 506px;
   flex-direction: column;
   align-items: center;
-  flex: 1 1 20%;
+  // flex: 1 1 20%;
+  height: 506px;
+  max-width: 310px;
   border-radius: 40px;
   border: 1px solid $border-light;
   cursor: pointer;
@@ -117,16 +129,16 @@
     align-items: center;
     width: 310px;
     height: 310px;
-    flex-shrink: 0;
     border-radius: 40px;
     overflow: hidden;
-    margin: 0 -15px;
   }
   &__image {
-    width: 340px;
-    height: 340px;
-    flex-shrink: 0;
-    margin: -15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: scale(1.09);
+    // flex-shrink: 0;
+    // margin: -15px;
     transition: transform 0.5s ease-in;
   }
   &__description {
@@ -152,5 +164,5 @@
 }
 
 .preview:hover .preview__image {
-  transform: scale(0.92);
+  transform: scale(1);
 }
